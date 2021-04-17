@@ -23,20 +23,7 @@ router.get("/ping", (req, res) => {
 	}
 });
 
-router.use("/static", () => {
-	express.static(path.join(__dirname, "../../../", "static"));
-});
-
 router.get("/api/quotes", quoteController.readAll);
 router.get("/api/quotes/random", quoteController.readRandom);
-/*router.get('/users/:id', usersController.getUserById);
-router.put('/users/create', validators.validateCreateUser, usersController.createUser);
-router.patch('/users/update', validators.validateUpdateUser, usersController.updateUser);
-router.delete('/users/remove/:id', usersController.removeUser);*!/*/
-
-/*router.use('*', (req, res, next) => {
-	res.status(404).send('Sorry, the path is not found.');
-	next();
-});*/
 
 export default router;

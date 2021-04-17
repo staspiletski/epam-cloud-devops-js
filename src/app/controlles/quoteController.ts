@@ -14,7 +14,6 @@ const quoteController = {
 
 	async readRandom(req: Request, res: Response) {
 		try {
-			console.log(" readRandom ");
 			const quotes = await userService.readRandom();
 			res.status(200).json(quotes);
 		} catch (error) {
