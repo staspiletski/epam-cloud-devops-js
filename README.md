@@ -12,4 +12,4 @@ yarn i / npm install
 ```
 yarn strt:dev / npm run start:dev
 ```
-See http://localhost:8000 for details
+See http://localhost:8000 for details and all available application routes
