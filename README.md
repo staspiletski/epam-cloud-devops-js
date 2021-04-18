@@ -4,7 +4,7 @@
 ```
 git clone git@github.com:staspiletski/epam-cloud-devops-js.git
 cd epam-cloud-devops-js
-yarn i / npm install
+yarn / npm install
 ```
 
 ### Run script in dev mode
