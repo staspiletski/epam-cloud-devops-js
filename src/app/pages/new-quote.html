@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Create a new quote</title>
+	<meta name="description" content="new quote">
+	<link rel="stylesheet" type="text/css" href="../../../static/styles/styles.css">
+</head>
+
+<body>
+	<h1> New quote : </h1>
+	<form name="new-quote" method="post" action="/api/quotes">
+		<p>Author:<br>
+			<input name="author" type="text" size="40">
+		</p>
+		<p>Link:<br>
+			<input type="url" name="source" cols="30" rows="3" placeholder="http://url.com" value="http://url.com"></p>
+		</p>
+		<p>Tags (separate by ,):<br>
+			<input type="text" name="tags" cols="30" rows="3"></p>
+		</p>
+		<p>Quote:<br>
+			<textarea name="text" cols="30" rows="3"></textarea></p>
+		</p>
+
+		<p><input type="submit" value="Create">
+	</form>
+
+</body>
+</html>
