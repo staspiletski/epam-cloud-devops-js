@@ -7,3 +7,15 @@ textarea {
 p {
 	font-weight: bold;
 }
+
+.home {
+	background: antiquewhite;
+}
+
+.error {
+	background: lightcoral;
+}
+
+.server_error {
+	background: #e04646;
+}
