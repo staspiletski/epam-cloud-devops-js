@@ -19,4 +19,16 @@ APP_PORT=8000
 ```
 yarn start:dev / npm run start:dev
 ```
+
+### NGINX
+Using Nginx locally on macOS. Root of the project: ~/epam-cloud-devops-js
+```
+1) Place files nginx.conf, gzip.conf, mime.types into NGINX catalog '/usr/local/etc/nginx'
+2) Place files from ssl folder into NGINX catalog '/usr/local/etc'
+3) Add ssl/localhost.cert into Keychain Access / Certificates
+4) Start NGINX using brew: sudo brew services start nginx
+5) Start NodeJS: yarn start:dev
+6) Start point: https://localhost/
+7) http://localhost:8080 redirect to https://localhost/
+```
 See http://localhost:8000 for details and all available application routes
