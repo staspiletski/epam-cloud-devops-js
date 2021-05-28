@@ -28,17 +28,41 @@ function print_available_commands() {
 	printf "%s\n" "$text"
 }
 
+function confirmation(){
+	local _prompt _default _response
+
+  if [ "$1" ]; then _prompt="$1"; else _prompt="Are you sure"; fi
+  _prompt="$_prompt [y/n] ?"
+
+  # Loop forever until the user enters a valid response (Y/N or Yes/No).
+  while true; do
+    read -r -p "$_prompt " _response
+    case "$_response" in
+      [Yy][Ee][Ss]|[Yy]) # Yes or Y (case-insensitive).
+        return 0
+        ;;
+      [Nn][Oo]|[Nn])  # No or N.
+        return 1
+        ;;
+      *) # Anything else (including a blank) is invalid.
+        ;;
+    esac
+  done
+  }
+
 function is_file_exists() {
 	DB_USER_FILE=../data/users.db
-	local CREATE_FILE=false
-	if [ -f "$DB_USER_FILE" ]; then
+	local CREATE_FILE=false user_response
+	if [ ! -f "$DB_USER_FILE" ]; then
 		printf "%s\n" "File '$DB_USER_FILE' exists."
 	else
 		#printf "%s\n" "$RED $DB_USER_FILE doesn't exist. Creating...\n$NORMAL" > $DB_USER_FILE
 		printf "%s\n" "$RED $DB_USER_FILE doesn't exist. Creating...\n$NORMAL"
 
-		read -p "Create a new file [y]es | [n]o :" CREATE_FILE
-		if []
+ 		user_response=$(confirmation "$@")
+ 		echo "Result $user_response"
+		#read -p "Create a new file [y]es | [n]o :" CREATE_FILE
+
 		printf "" > $DB_USER_FILE
 	fi
 }
@@ -83,6 +107,7 @@ echo "$0 start"
 while [ -n "$1" ]; do
 	case "$1" in
 	add) add_user ;;
+	conf) confirmation ;;
 	list) echo "Found the list option" ;;
 	* | help) print_available_commands ;;
 	esac
