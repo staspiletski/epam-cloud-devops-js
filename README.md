@@ -34,7 +34,7 @@ Using Nginx locally on macOS. Root of the project: ~/epam-cloud-devops-js
 See http://localhost:8000 for details and all available application routes
 
 ### Open terminal and go to /script folder
-will show list of available commands
+list of available commands
 ```
-./db.sh / ./db.sh help
+./db.sh or ./db.sh help
 ```
