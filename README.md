@@ -32,3 +32,9 @@ Using Nginx locally on macOS. Root of the project: ~/epam-cloud-devops-js
 7) http://localhost:8080 redirect to https://localhost/
 ```
 See http://localhost:8000 for details and all available application routes
+
+### Open terminal and go to /script folder
+list of available commands
+```
+./db.sh or ./db.sh help
+```
