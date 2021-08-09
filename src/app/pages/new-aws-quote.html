@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Create a new AWS quote</title>
+	<meta name="description" content="new aws quote">
+	<link rel="stylesheet" type="text/css" href="../../../static/styles/styles.css">
+</head>
+
+<body>
+<h1> New quote : </h1>
+<form name="new-quote" method="post" action="/api/aws/new-quote">
+	<p>Author:<br>
+		<input name="author" type="text" size="40">
+	</p>
+	<p>Quote:<br>
+		<textarea name="text" type="text" cols="30" rows="3"></textarea></p>
+	</p>
+
+	<p>First name:<br>
+		<input name="firstName" type="text" placeholder="Stas" value="Stas"></p>
+	</p>
+
+	<p>Send to email:<br>
+		<input name="email" type="text" placeholder="bye-bye@tut.by" value="bye-bye@tut.by"></p>
+	</p>
+	<p>From:<br>
+		<input name="from" type="text" placeholder="bye-bye@tut.by" value="bye-bye@tut.by"></p>
+	</p>
+	<p>Use email template:<br>
+		<input name="templateName" type="text" placeholder="EmailNotificationTemplate" value="EmailNotificationTemplate">
+	</p>
+	</p>
+
+	<p><input type="submit" value="Share">
+</form>
+
+</body>
+</html>

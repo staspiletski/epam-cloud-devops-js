@@ -33,5 +33,7 @@ router.put('/api/quotes/:id', quoteController.updateById);
 router.get('/api/remove-all-quotes', quoteController.removeAllQuotes);
 router.get('/api/delete-quote', (req, res) => res.sendFile(path.join(__dirname, '../../app/pages/delete-quote.html')));
 router.delete('/api/quotes:/id', quoteController.deleteById);
+router.get('/api/aws/new-quote', (req, res) => res.sendFile(path.join(__dirname, '../../app/pages/new-aws-quote.html')));
+router.post('/api/aws/new-quote', quoteController.createAwsQuote);
 
 export default router;

@@ -1,0 +1,8 @@
+{
+	"Template": {
+		"TemplateName": "EmailNotificationTemplate",
+		"SubjectPart": "Welcome {{firstName}}",
+		"TextPart": "Email notification template body",
+		"HtmlPart": "<h1>Hello {{firstName}}</h1>\n<p style=\"font-weight: bold\">Quote of the day:</p>\n<div style=\"color: chocolate; font-style: italic; border: 1px solid chocolate; padding: 10px;\">{{quote.text}}</div></br></br>\n<div style=\"color: black; font-style: normal; text-align: right\">{{quote.author}}</div>"
+	}
+}

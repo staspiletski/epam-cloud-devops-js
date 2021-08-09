@@ -71,6 +71,18 @@ const quoteController = {
 		}
 	},
 
+	async createAwsQuote(req: Request, res: Response) {
+		console.log('  createAwsQuote  ');
+		try {
+			const { author, text, from, firstName, email, templateName } = req.body;
+			const quote = await quoteService.createAwsQuote(author, text, from, firstName, email, templateName);
+			res.status(201).json(quote);
+		} catch (error) {
+			console.error(error);
+			res.status(404).json(error.message);
+		}
+	},
+
 	async removeAllQuotes(req: Request, res: Response) {
 		try {
 			await quoteService.removeAllQuotes();
