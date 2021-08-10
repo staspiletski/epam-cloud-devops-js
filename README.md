@@ -38,3 +38,22 @@ list of available commands
 ```
 ./db.sh or ./db.sh help
 ```
+
+### AWS
+create a new email template
+```
+./create-template.sh
+```
+update existing email template
+```
+./update-notification-email-template.sh
+```
+update lambda
+```
+./update-notification-email-template.sh
+```
+Send email notification with a quote use the page below.
+Email was sent to verified email address and saved in s3 bucket. 
+```
+http://localhost:4200/api/aws/new-quote
+```

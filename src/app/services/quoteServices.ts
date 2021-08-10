@@ -2,6 +2,7 @@ import type { Quote } from '../models/quotes';
 import { fileReader } from '../utilities/dataHelper';
 import { writeFile } from 'fs/promises';
 import { v4 as uuidv4 } from 'uuid';
+import dotenv from 'dotenv';
 
 const quoteService = {
 	async readAll() {
@@ -49,6 +50,36 @@ const quoteService = {
 		json.push(newQuote);
 		await writeFile('assets/data.json', JSON.stringify(json, null, 2));
 		return newQuote;
+	},
+
+	async createAwsQuote(author: string, text: string, from: string, firstName: string, email: string, templateName: string) {
+		dotenv.config();
+		const axios = require('axios');
+		const data = {
+			from: from,
+			firstName: firstName,
+			email: email,
+			quote: {
+				author: author,
+				text: text,
+			},
+			templateName: templateName,
+		};
+
+		axios
+			.post(process.env.AWS_ENDPOINT, data, {
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			})
+			.then((res: any) => {
+				console.log(`statusCode: ${res.status}`);
+				return data;
+			})
+			.catch((error: any) => {
+				console.error('Error ', error);
+				return { error: error };
+			});
 	},
 
 	async removeAllQuotes() {
