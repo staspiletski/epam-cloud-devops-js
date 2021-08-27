@@ -7,7 +7,7 @@ const quoteController = {
 			console.log(' readAll ');
 			const quotes = await quoteService.readAll();
 			res.status(200).json(quotes);
-		} catch (error) {
+		} catch (error: any) {
 			console.error(error);
 			res.status(404).json(error.message);
 		}
@@ -19,7 +19,7 @@ const quoteController = {
 			const id = req.params['id'];
 			const quote = await quoteService.readById(id);
 			quote && quote.length !== 0 ? res.status(200).json(quote) : res.status(404).json('Quote not found');
-		} catch (error) {
+		} catch (error: any) {
 			console.error(error);
 			res.status(404).json(error.message);
 		}
@@ -32,7 +32,7 @@ const quoteController = {
 			const id = req.params['id'];
 			const quote = await quoteService.readById(id);
 			quote && quote.length !== 0 ? res.status(200).json(quote) : res.status(404).json('Quote not found');
-		} catch (error) {
+		} catch (error: any) {
 			console.error(error);
 			res.status(404).json(error.message);
 		}
@@ -53,7 +53,7 @@ const quoteController = {
 			}
 
 			res.status(200).json(quotes);
-		} catch (error) {
+		} catch (error: any) {
 			console.error(error);
 			res.status(404).json(error.message);
 		}
@@ -65,7 +65,7 @@ const quoteController = {
 			const { author, text, source, tags } = req.body;
 			const quote = await quoteService.create({ author, text, source, tags });
 			res.status(201).json(quote);
-		} catch (error) {
+		} catch (error: any) {
 			console.error(error);
 			res.status(404).json(error.message);
 		}
@@ -77,7 +77,7 @@ const quoteController = {
 			const { author, text, from, firstName, email, templateName } = req.body;
 			const quote = await quoteService.createAwsQuote(author, text, from, firstName, email, templateName);
 			res.status(201).json(quote);
-		} catch (error) {
+		} catch (error: any) {
 			console.error(error);
 			res.status(404).json(error.message);
 		}
@@ -87,7 +87,7 @@ const quoteController = {
 		try {
 			await quoteService.removeAllQuotes();
 			res.status(201).json({ text: 'All Quotes were removed.' });
-		} catch (error) {
+		} catch (error: any) {
 			console.error(error);
 			res.status(404).json(error.message);
 		}
@@ -99,7 +99,7 @@ const quoteController = {
 			const id = req.params['id'];
 			const quote = await quoteService.deleteById(id);
 			res.status(200).json(quote);
-		} catch (error) {
+		} catch (error: any) {
 			console.error(error);
 			res.status(404).json(error.message);
 		}
