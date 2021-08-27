@@ -17,7 +17,7 @@ router.get('/ping', (req, res) => {
 
 	try {
 		res.status(200).send(healthCheck);
-	} catch (e) {
+	} catch (e: any) {
 		healthCheck.message = e;
 		res.status(503).send();
 	}

@@ -1,28 +1,24 @@
 [
-  {
-    "id": "078a7aa7-e328-42be-ac17-ea1955706fb9",
-    "author": "1",
-    "text": "1",
-    "source": "http://url.com",
-    "tags": [
-      "1"
-    ],
-    "createdBy": "2021-04-30T14:41:18.689Z",
-    "createdAt": "2021-04-30T14:41:18.689Z",
-    "updatedAt": "2021-04-30T14:41:18.689Z",
-    "isDeleted": false
-  },
-  {
-    "id": "85d8cd77-0bb4-49bf-82bb-c2117b17fa4a",
-    "author": "2",
-    "text": "2",
-    "source": "http://url.com",
-    "tags": [
-      "2"
-    ],
-    "createdBy": "2021-04-30T14:41:28.747Z",
-    "createdAt": "2021-04-30T14:41:28.747Z",
-    "updatedAt": "2021-04-30T14:41:28.747Z",
-    "isDeleted": false
-  }
+	{
+		"id": "078a7aa7-e328-42be-ac17-ea1955706fb9",
+		"author": "1",
+		"text": "1",
+		"source": "http://url.com",
+		"tags": ["1"],
+		"createdBy": "2021-04-30T14:41:18.689Z",
+		"createdAt": "2021-04-30T14:41:18.689Z",
+		"updatedAt": "2021-04-30T14:41:18.689Z",
+		"isDeleted": false
+	},
+	{
+		"id": "85d8cd77-0bb4-49bf-82bb-c2117b17fa4a",
+		"author": "2",
+		"text": "2",
+		"source": "http://url.com",
+		"tags": ["2"],
+		"createdBy": "2021-04-30T14:41:28.747Z",
+		"createdAt": "2021-04-30T14:41:28.747Z",
+		"updatedAt": "2021-04-30T14:41:28.747Z",
+		"isDeleted": false
+	}
 ]
