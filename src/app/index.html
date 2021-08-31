@@ -6,22 +6,25 @@
 		<title>Home page</title>
 		<meta name="description" content="home page" />
 		<script type="text/javascript" src="../../static/js/utils.js"></script>
-
 	</head>
 
 	<body>
 		<h1>Routes :</h1>
-		<p><a href="//localhost:8000/static/images/nodejs.png">Static file</a></p>
-		<p><a href="//localhost:8000/ping">Health check</a></p>
-		<p><a href="//localhost:8000/api/quotes">Get all quotes</a></p>
-		<p><a href="//localhost:8000/api/quotes/">Get by Id ( .../:id - place id at the end of the url)</a></p>
-		<p><a href="//localhost:8000/api/quotes/random">Random quote</a></p>
-		<p><a href="//localhost:8000/api/quotes/random?tag=tag1">Random quote by tag (.../:tag - place id at the end of the url)</a></p>
-		<p><a href="//localhost:8000/api/remove-all-quotes">Remove all quotes</a></p>
-		<p><a href="//localhost:8000/api/new-quote">Create a quote</a></p>
-		<p><a href="//localhost:8000/api/update-quote">Update a quote</a></p>
-		<p><button type="button" onclick="deleteData('/api/quotes/', 'DELETE', document.getElementById('quoteDelete').value)">Delete quote by id </button> ID: <input id="quoteDelete" type="text"/></p>
+		<p><a href="//localhost:80/static/images/nodejs.png">Static file</a></p>
+		<p><a href="//localhost:80/ping">Health check</a></p>
+		<p><a href="//localhost:80/api/quotes">Get all quotes</a></p>
+		<p><a href="//localhost:80/api/quotes/">Get by Id ( .../:id - place id at the end of the url)</a></p>
+		<p><a href="//localhost:80/api/quotes/random">Random quote</a></p>
+		<p><a href="//localhost:80/api/quotes/random?tag=tag1">Random quote by tag (.../:tag - place id at the end of the url)</a></p>
+		<p><a href="//localhost:80/api/remove-all-quotes">Remove all quotes</a></p>
+		<p><a href="//localhost:80/api/new-quote">Create a quote</a></p>
+		<p><a href="//localhost:80/api/update-quote">Update a quote</a></p>
+		<p>
+			<button type="button" onclick="deleteData('/api/quotes/', 'DELETE', document.getElementById('quoteDelete').value)">
+				Delete quote by id
+			</button>
+			ID: <input id="quoteDelete" type="text" />
+		</p>
 		<p><a href="//localhost:4200/api/aws/new-quote">New ASW quote</a></p>
 	</body>
-
 </html>
