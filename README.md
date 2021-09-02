@@ -57,3 +57,35 @@ Email was sent to verified email address and saved in s3 bucket.
 ```
 http://localhost:4200/api/aws/new-quote
 ```
+
+### AWS EC2
+start an instance
+```
+./scripts/aws-ec2/start.sh
+```
+stop the instance
+```
+./scripts/aws-ec2/stop.sh
+```
+
+### AWS EC2 Update the project
+Develop new features and commit to gitHub project repository
+
+connect to the instance
+```
+ssh my-ec2
+```
+go to the project root
+```
+cd ~/epam-cloud-devops-js
+```
+pull the latest changes and build the project
+```
+git pull && yarn && yarn build
+```
+start the project
+```
+pm2 start main
+```
+
+Open https://ec2-3-66-224-113.eu-central-1.compute.amazonaws.com
