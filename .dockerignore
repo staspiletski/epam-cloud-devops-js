@@ -1,0 +1,9 @@
+# Node modules
+node_modules/
+npm-debug.log
+
+# Mac OS
+.DS_Store
+
+# Intellij Configuration Files
+.idea/
